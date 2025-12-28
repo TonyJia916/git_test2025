@@ -55,12 +55,15 @@ bool readPathFromCSV(const std::string& filename, std::vector<double>& x_coords,
                 break;
             }
         }
-        
-        // 确保行中有足够的数据
-        if (row.size() >= 3) {
-            x_coords.push_back(row[1]);  // 第二列
-            y_coords.push_back(row[2]);  // 第三列
+        while (std::getline(ss, token, ',')) {
+            try {
+                row.push_back(std::stod(token));
+            } catch (const std::exception& e) {
+                row.clear();
+                break;
+            }
         }
+        
     }
     
     file.close();
