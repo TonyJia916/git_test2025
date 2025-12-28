@@ -1,0 +1,4 @@
+rviz_plot_node:
+  ros__parameters:
+ 
+    traj_file_path: "./refline_offline/1202科创园轨迹track_point.csv"
