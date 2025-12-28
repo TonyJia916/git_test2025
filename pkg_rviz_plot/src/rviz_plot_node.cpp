@@ -54,8 +54,8 @@ bool readPathFromCSV(const std::string& filename, std::vector<double>& x_coords,
                 row.clear();
                 break;
             }
-        }
-        
+        } 
+        y_coords.push_back(row[2]);  // 第三列
         y_coords.push_back(row[2]);  // 第三列
         // 确保行中有足够的数据
         if (row.size() >= 3) {
