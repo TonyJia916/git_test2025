@@ -61,7 +61,7 @@ bool readPathFromCSV(const std::string& filename, std::vector<double>& x_coords,
         if (row.size() >= 3) {
             
              
-            y_coords.push_back(row[2]);  // 第三列
+            y_coords.push_back(row[12]);  // 第三列
         }
     }
     
